@@ -1,37 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-    <meta name="viewport" content="width=device-width, initial scale=1.0" />
-    <title>Check Dam</title>
-    <link rel="stylesheet" href="CSS/index.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkdam</title>
+  <link rel="stylesheet" href="CSS/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+<body>
+  <section class="header">
     <nav>
-      <ul class="sidebar">
-        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#efe3c2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-        <li><a href="#">Fasilitas</a></li>
-        <li><a href="#">Lokasi</a></li>
-      </ul>
-      <ul>
-        <li class="logo"><a href="#"><img src="logo_tanggamus.png" alt="Tanggamus"></a></li>
-        <li class="hideOnMobile"><a href="#">Fasilitas</a></li>
-        <li class="hideOnMobile"><a href="#">Lokasi</a></li>
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#efe3c2"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-      </ul>
+      <a href="index.html"><img src="logo_tanggamus.png" alt=""></a>
+      <div class="nav-links" id="navLinks">
+        <svg onclick="hideMenu()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#facilities">Fasilitas</a></li>
+          <li><a href="#lokasi">Lokasi</a></li>
+          <li><a href="#footer">Tentang Kami</a></li>
+        </ul>
+      </div>
+      <svg onclick="showMenu()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
     </nav>
 
-    <script>
-      function showSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'flex'
-      }
+    <div class="text-box">
+      <h1>Wisata Bendungan Checkdam</h1>
+      <p>Selamat datang di wisata bendungan Checkdam, wisata bendunngan
+        pertama yang berada di <br>Pekon Payung, Kotaagung Barat, Tanggamus.
+      </p>
+      <a href="#facilities" class="hero-btn">Cari Tahu</a>
+    </div>
 
-      function hideSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'none'
-      }
-    </script>
-  </body>
+  </section>
+
+<!-----Fasilitas---->
+<section class="facilities" id="facilities">
+  <h1>Fasilitas Kami</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  <div class="row">
+    <div class="facilities-col">
+      <img src="aset/check dam.jpg" alt="">
+      <h3>Kantin</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+    <div class="facilities-col">
+      <img src="aset/checkdam 2.jpg" alt="">
+      <h3>Ban Renang</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+    <div class="facilities-col">
+      <img src="aset/check dam 3.jpg" alt="">
+      <h3>Spot Foto</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+
+  </div>
+</section>
+
+<!------Lokasi------>
+<section class="lokasi" id="lokasi">
+  <h1>Lokasi Bendungan <br> Check Dam</h1>
+  <a href="#" class="hero-btn">CEK LOKASI</a>
+</section>
+
+<!------Footer------>
+<section class="footer" id="footer">
+  <h4>Tentang Kami</h4>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, quod. Dolorem libero fugit rerum esse, magni ipsa odio corrupti, doloribus <br>ad harum expedita suscipit porro temporibus odit, voluptas repellendus dicta.</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_aj3CyKfrKo?si=JKNFxFl9KjAyuDEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p>Powered By:</p>
+  <ul>
+    <li><img src="aset/KKN ITERA.png" alt=""></li>
+    <li><img src="" alt=""></li>
+  </ul>
+</section>
+
+<!-----JS------>
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu(){
+    navLinks.style.display = "block"; // Ensure the menu is visible
+  setTimeout(() => {
+    navLinks.style.right = "0"; // Slide in from the right
+  }, 10); 
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px"; // Slide out to the right
+  setTimeout(() => {
+    navLinks.style.display = "none"; // Hide after transition
+  }, 500);
+  }
+</script>
+
+</body>
 </html>
