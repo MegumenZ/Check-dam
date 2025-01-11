@@ -216,7 +216,7 @@ nav img{
  /*-----Lokasi-----*/
  .lokasi{
   margin: 100px auto;
-  margin-top: auto;
+  margin-top: -100px;
   width: 80%;
   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/aset/Cek\ Lokasi.jpg);
   background-position: center;
