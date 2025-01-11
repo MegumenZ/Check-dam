@@ -182,7 +182,7 @@ nav img{
 
  .facilities-col h3{
   margin-top: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-align: left;
  }
 
@@ -205,11 +205,16 @@ nav img{
    .facilities-col h3{
     font-weight: bold;
    }
+
+   .facilities-col p{
+    margin-bottom: 16px;
+   }
  }
 
  /*-----Lokasi-----*/
  .lokasi{
   margin: 100px auto;
+  margin-top: auto;
   width: 80%;
   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/aset/Cek\ Lokasi.jpg);
   background-position: center;
@@ -230,6 +235,7 @@ nav img{
   .lokasi{
     width: 100%;
     border-radius: 0;
+    margin-top: 50px;
   }
  }
 
@@ -238,6 +244,18 @@ nav img{
   width: 100%;
   text-align: center;
   padding: 20px 0;
+ }
+
+ .footer p{
+  margin-top: 10px;
+ }
+
+ .footer ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
  }
 
  .footer h4{
@@ -253,12 +271,58 @@ nav img{
  .footer img{
   width: 100px;
   height: auto;
+  margin: 10px;
  }
+
+ .video-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.video-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 560px; /* Adjust based on your video size */
+}
+
+.video-wrapper iframe {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease;
+}
+
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.left-button {
+  left: 10px;
+}
+
+.right-button {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
  @media(max-width: 800px){
   .footer iframe{
     width: 100%;
-    height: 200px;
+    max-width: 800px;;
   }
 
   .footer h4{
@@ -266,7 +330,12 @@ nav img{
   }
 
   .footer img{
-    width: 100px;
+    width: 50px;
     height: auto;
+  }
+
+  .footer p{
+    margin-left: 10px;
+    margin-right: 10px;
   }
  }

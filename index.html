@@ -42,19 +42,25 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
   <div class="row">
     <div class="facilities-col">
-      <img src="aset/check dam.jpg" alt="">
+      <img src="aset/kantin.jpg" alt="">
       <h3>Kantin</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <p>Tersedia 2 kantin yang berada di dekat pintu masuk dan seberang
+        bendungan untuk beristirahat sambil menikmati hidangan yang tersedia.
+      </p>
     </div>
     <div class="facilities-col">
       <img src="aset/checkdam 2.jpg" alt="">
       <h3>Ban Renang</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <p>Kami menyediakan ban renang bagi anda yang kesulitan berenang atau
+         bersantai di bendungan dengan tarif yang terjangkau.
+      </p>
     </div>
     <div class="facilities-col">
       <img src="aset/check dam 3.jpg" alt="">
       <h3>Spot Foto</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <p>Kami menyediakan spot foto yang menarik dan estetik untuk
+        kenangan anda bersama keluarga & teman anda.
+      </p>
     </div>
 
   </div>
@@ -63,18 +69,30 @@
 <!------Lokasi------>
 <section class="lokasi" id="lokasi">
   <h1>Lokasi Bendungan <br> Check Dam</h1>
-  <a href="#" class="hero-btn">CEK LOKASI</a>
+  <a href="https://bit.ly/3DSeVsL" class="hero-btn" target="_blank">CEK LOKASI</a>
 </section>
 
 <!------Footer------>
 <section class="footer" id="footer">
-  <h4>Tentang Kami</h4>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, quod. Dolorem libero fugit rerum esse, magni ipsa odio corrupti, doloribus <br>ad harum expedita suscipit porro temporibus odit, voluptas repellendus dicta.</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/_aj3CyKfrKo?si=JKNFxFl9KjAyuDEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <p>Powered By:</p>
+  <h4>Tentang kami</h4>
+  <p>Selamat datang di Wisata Bendungan Checkdam, destinasi wisata bendungan pertama yang terletak di Pekon Payung, Kotaagung Barat, Tanggamus. 
+    <br>Misi kami adalah untuk memberikan pengalaman yang unik dan tak terlupakan bagi para pengunjung dengan menawarkan perpaduan antara keindahan alam, kegiatan rekreasi, dan fasilitas. 
+    <br>Anda ingin bersantai di tepi air, menikmati makanan di kantin kami, atau mengambil foto yang berkesan di spot fot kami, kami berusaha untuk membuat kunjungan Anda tak terlupakan.</p>
+  
+    <!-- Video Section -->
+  <div class="video-container">
+    <button class="nav-button left-button" onclick="prevVideo()">&#10094;</button>
+    <div class="video-wrapper">
+      <iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/yWz9KfLBKJo?si=xy1GaZhSTABDl0Ii" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_aj3CyKfrKo?si=JFXM2WsJSqd0WFl3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <button class="nav-button right-button" onclick="nextVideo()">&#10095;</button>
+  </div>
+   <p>Powered By:</p>
   <ul>
-    <li><img src="aset/KKN ITERA.png" alt=""></li>
-    <li><img src="" alt=""></li>
+    <li><img src="aset/Logo_ITERA.png" alt="ITERA"></li>
+    <li><img src="aset/KKN ITERA.png" alt="KKN ITERA"></li>
+    <li><img src="aset/Kelompok 43 kkn 20250110_131856.jpg" alt="KKN ITERA Kelompok 43"></li>
   </ul>
 </section>
 
@@ -94,6 +112,32 @@
     navLinks.style.display = "none"; // Hide after transition
   }, 500);
   }
+
+  let currentVideoIndex = 0;
+const videos = document.querySelectorAll('.video-wrapper iframe');
+
+function showVideo(index) {
+  videos.forEach((video, i) => {
+    if (i === index) {
+      video.style.display = 'block'; // Show the current video
+    } else {
+      video.style.display = 'none'; // Hide other videos
+    }
+  });
+}
+
+function nextVideo() {
+  currentVideoIndex = (currentVideoIndex + 1) % videos.length; // Move to the next video
+  showVideo(currentVideoIndex);
+}
+
+function prevVideo() {
+  currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length; // Move to the previous video
+  showVideo(currentVideoIndex);
+}
+
+// Show the first video initially
+showVideo(currentVideoIndex);
 </script>
 
 </body>
