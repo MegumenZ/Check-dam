@@ -98,11 +98,13 @@ nav img{
   background: transparent;
   position: relative;
   cursor: pointer;
+  transition: 1s;
  }
 
  .hero-btn:hover{
   border: 1px solid green;
   background: green;
+  scale: 1.20;
   transition: 1s;
  }
 
