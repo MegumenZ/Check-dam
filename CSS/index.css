@@ -274,6 +274,12 @@ nav img{
   width: 100px;
   height: auto;
   margin: 10px;
+  transition: 0.3s ease-out;
+ }
+
+ .footer img:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease-in;
  }
 
  .video-container {
